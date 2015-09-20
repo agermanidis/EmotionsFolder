@@ -2,8 +2,8 @@
 <img height=100 width=130 src="images/sadfolder.png"></img>
 <img height=100 width=130 src="images/angryfolder.png"></img>
 <img height=100 width=130 src="images/surprisedfolder.png"></img>
-<img height=100 width=130 src="images/fearfolder.png></img>
-<img height=100 width=130 src="images/disgustfolder.png></img>
+<img height=100 width=130 src="images/fearfolder.png"></img>
+<img height=100 width=130 src="images/disgustfolder.png"></img>
 
 # Emotions Folder
 
