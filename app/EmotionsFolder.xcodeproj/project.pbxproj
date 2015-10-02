@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F7AC6E51BBD0621002052DC /* ImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AC6E41BBD0621002052DC /* ImageUtils.mm */; };
+		4F899FB81BB99D8B006171C2 /* face.con in Resources */ = {isa = PBXBuildFile; fileRef = 4F899FB51BB99D8B006171C2 /* face.con */; };
+		4F899FB91BB99D8B006171C2 /* face.tracker in Resources */ = {isa = PBXBuildFile; fileRef = 4F899FB61BB99D8B006171C2 /* face.tracker */; };
+		4F899FBA1BB99D8B006171C2 /* face.tri in Resources */ = {isa = PBXBuildFile; fileRef = 4F899FB71BB99D8B006171C2 /* face.tri */; };
+		4F899FE11BB9E514006171C2 /* Outputter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F899FE01BB9E514006171C2 /* Outputter.swift */; };
+		4F899FEC1BBA0FBC006171C2 /* FaceRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F899FE81BBA0FBC006171C2 /* FaceRecognizer.cpp */; };
+		4F899FED1BBA0FBC006171C2 /* FaceRecognizerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F899FEB1BBA0FBC006171C2 /* FaceRecognizerWrapper.mm */; };
+		4F899FFE1BBB503A006171C2 /* IO.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FBF1BB99DCA006171C2 /* IO.o */; };
+		4F899FFF1BBB503A006171C2 /* PDM.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FC21BB99DCA006171C2 /* PDM.o */; };
+		4F89A0001BBB503A006171C2 /* Patch.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FC01BB99DCA006171C2 /* Patch.o */; };
+		4F89A0011BBB503A006171C2 /* CLM.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FBC1BB99DCA006171C2 /* CLM.o */; };
+		4F89A0021BBB503A006171C2 /* FDet.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FBE1BB99DCA006171C2 /* FDet.o */; };
+		4F89A0031BBB503A006171C2 /* PAW.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FC11BB99DCA006171C2 /* PAW.o */; };
+		4F89A0041BBB503A006171C2 /* FCheck.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FBD1BB99DCA006171C2 /* FCheck.o */; };
+		4F89A0051BBB503A006171C2 /* libopencv_calib3d.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCD1BB99E94006171C2 /* libopencv_calib3d.2.4.11.dylib */; };
+		4F89A0061BBB503A006171C2 /* libopencv_core.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCA1BB99E94006171C2 /* libopencv_core.2.4.11.dylib */; };
+		4F89A0071BBB503A006171C2 /* libopencv_highgui.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FD01BB99E94006171C2 /* libopencv_highgui.2.4.11.dylib */; };
+		4F89A0081BBB503A006171C2 /* libopencv_imgproc.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCB1BB99E94006171C2 /* libopencv_imgproc.2.4.11.dylib */; };
+		4F89A0091BBB503A006171C2 /* libopencv_ml.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCF1BB99E94006171C2 /* libopencv_ml.2.4.11.dylib */; };
+		4F89A00A1BBB503A006171C2 /* libopencv_objdetect.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCE1BB99E94006171C2 /* libopencv_objdetect.2.4.11.dylib */; };
+		4F89A00B1BBB503A006171C2 /* libopencv_ocl.2.4.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FCC1BB99E94006171C2 /* libopencv_ocl.2.4.11.dylib */; };
+		4F89A00C1BBB503A006171C2 /* Tracker.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F899FF91BBA1103006171C2 /* Tracker.o */; };
+		4F89A00E1BBB57A4006171C2 /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89A00D1BBB57A4006171C2 /* Buffer.swift */; };
+		4F89A0101BBB57AC006171C2 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89A00F1BBB57AC006171C2 /* Recorder.swift */; };
+		4F89A0121BBB5BA3006171C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89A0111BBB5BA3006171C2 /* Constants.swift */; };
+		4F89A0141BBC3F7E006171C2 /* FinderFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89A0131BBC3F7E006171C2 /* FinderFavorites.swift */; };
+		4F9AD9AB1BB8EC7900490A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AD9AA1BB8EC7900490A5C /* AppDelegate.swift */; };
+		4F9AD9AD1BB8EC7900490A5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AD9AC1BB8EC7900490A5C /* Images.xcassets */; };
+		4F9AD9B01BB8EC7900490A5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AD9AE1BB8EC7900490A5C /* MainMenu.xib */; };
+		4F9AD9BC1BB8EC7900490A5C /* EmotionsFolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AD9BB1BB8EC7900490A5C /* EmotionsFolderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F9AD9B61BB8EC7900490A5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F9AD99D1BB8EC7800490A5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F9AD9A41BB8EC7900490A5C;
+			remoteInfo = EmotionsFolder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F7AC6E31BBD0621002052DC /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		4F7AC6E41BBD0621002052DC /* ImageUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageUtils.mm; sourceTree = "<group>"; };
+		4F899FB51BB99D8B006171C2 /* face.con */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = face.con; sourceTree = "<group>"; };
+		4F899FB61BB99D8B006171C2 /* face.tracker */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = face.tracker; sourceTree = "<group>"; };
+		4F899FB71BB99D8B006171C2 /* face.tri */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = face.tri; sourceTree = "<group>"; };
+		4F899FBC1BB99DCA006171C2 /* CLM.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = CLM.o; sourceTree = "<group>"; };
+		4F899FBD1BB99DCA006171C2 /* FCheck.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = FCheck.o; sourceTree = "<group>"; };
+		4F899FBE1BB99DCA006171C2 /* FDet.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = FDet.o; sourceTree = "<group>"; };
+		4F899FBF1BB99DCA006171C2 /* IO.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = IO.o; sourceTree = "<group>"; };
+		4F899FC01BB99DCA006171C2 /* Patch.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Patch.o; sourceTree = "<group>"; };
+		4F899FC11BB99DCA006171C2 /* PAW.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = PAW.o; sourceTree = "<group>"; };
+		4F899FC21BB99DCA006171C2 /* PDM.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = PDM.o; sourceTree = "<group>"; };
+		4F899FCA1BB99E94006171C2 /* libopencv_core.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_core.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FCB1BB99E94006171C2 /* libopencv_imgproc.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FCC1BB99E94006171C2 /* libopencv_ocl.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_ocl.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FCD1BB99E94006171C2 /* libopencv_calib3d.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_calib3d.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FCE1BB99E94006171C2 /* libopencv_objdetect.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_objdetect.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FCF1BB99E94006171C2 /* libopencv_ml.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_ml.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FD01BB99E94006171C2 /* libopencv_highgui.2.4.11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_highgui.2.4.11.dylib; sourceTree = "<group>"; };
+		4F899FD81BB99FA7006171C2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		4F899FDC1BB9ADB3006171C2 /* EmotionsFolder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmotionsFolder-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F899FE01BB9E514006171C2 /* Outputter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outputter.swift; sourceTree = "<group>"; };
+		4F899FE81BBA0FBC006171C2 /* FaceRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceRecognizer.cpp; sourceTree = "<group>"; };
+		4F899FE91BBA0FBC006171C2 /* FaceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecognizer.h; sourceTree = "<group>"; };
+		4F899FEA1BBA0FBC006171C2 /* FaceRecognizerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecognizerWrapper.h; sourceTree = "<group>"; };
+		4F899FEB1BBA0FBC006171C2 /* FaceRecognizerWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceRecognizerWrapper.mm; sourceTree = "<group>"; };
+		4F899FEF1BBA1049006171C2 /* CLM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLM.h; sourceTree = "<group>"; };
+		4F899FF01BBA1049006171C2 /* FCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCheck.h; sourceTree = "<group>"; };
+		4F899FF11BBA1049006171C2 /* FDet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDet.h; sourceTree = "<group>"; };
+		4F899FF21BBA1049006171C2 /* IO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		4F899FF31BBA1049006171C2 /* Patch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patch.h; sourceTree = "<group>"; };
+		4F899FF41BBA1049006171C2 /* PAW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAW.h; sourceTree = "<group>"; };
+		4F899FF51BBA1049006171C2 /* PDM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDM.h; sourceTree = "<group>"; };
+		4F899FF61BBA1049006171C2 /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		4F899FF71BBA10A0006171C2 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		4F899FF91BBA1103006171C2 /* Tracker.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Tracker.o; sourceTree = "<group>"; };
+		4F89A00D1BBB57A4006171C2 /* Buffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buffer.swift; sourceTree = "<group>"; };
+		4F89A00F1BBB57AC006171C2 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		4F89A0111BBB5BA3006171C2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4F89A0131BBC3F7E006171C2 /* FinderFavorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderFavorites.swift; sourceTree = "<group>"; };
+		4F9AD9A51BB8EC7900490A5C /* EmotionsFolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionsFolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9AD9A91BB8EC7900490A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F9AD9AA1BB8EC7900490A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F9AD9AC1BB8EC7900490A5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F9AD9AF1BB8EC7900490A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4F9AD9B51BB8EC7900490A5C /* EmotionsFolderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionsFolderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9AD9BA1BB8EC7900490A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F9AD9BB1BB8EC7900490A5C /* EmotionsFolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsFolderTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F9AD9A21BB8EC7900490A5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F899FFE1BBB503A006171C2 /* IO.o in Frameworks */,
+				4F899FFF1BBB503A006171C2 /* PDM.o in Frameworks */,
+				4F89A0001BBB503A006171C2 /* Patch.o in Frameworks */,
+				4F89A0011BBB503A006171C2 /* CLM.o in Frameworks */,
+				4F89A0021BBB503A006171C2 /* FDet.o in Frameworks */,
+				4F89A0031BBB503A006171C2 /* PAW.o in Frameworks */,
+				4F89A0041BBB503A006171C2 /* FCheck.o in Frameworks */,
+				4F89A0051BBB503A006171C2 /* libopencv_calib3d.2.4.11.dylib in Frameworks */,
+				4F89A0061BBB503A006171C2 /* libopencv_core.2.4.11.dylib in Frameworks */,
+				4F89A0071BBB503A006171C2 /* libopencv_highgui.2.4.11.dylib in Frameworks */,
+				4F89A0081BBB503A006171C2 /* libopencv_imgproc.2.4.11.dylib in Frameworks */,
+				4F89A0091BBB503A006171C2 /* libopencv_ml.2.4.11.dylib in Frameworks */,
+				4F89A00A1BBB503A006171C2 /* libopencv_objdetect.2.4.11.dylib in Frameworks */,
+				4F89A00B1BBB503A006171C2 /* libopencv_ocl.2.4.11.dylib in Frameworks */,
+				4F89A00C1BBB503A006171C2 /* Tracker.o in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F9AD9B21BB8EC7900490A5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F899FB41BB99D5E006171C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F899FB51BB99D8B006171C2 /* face.con */,
+				4F899FB61BB99D8B006171C2 /* face.tracker */,
+				4F899FB71BB99D8B006171C2 /* face.tri */,
+			);
+			name = Resources;
+			path = EmotionsFolder/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		4F899FBB1BB99DBE006171C2 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4F899FF71BBA10A0006171C2 /* libstdc++.dylib */,
+				4F899FD81BB99FA7006171C2 /* libc++.dylib */,
+				4F899FCA1BB99E94006171C2 /* libopencv_core.2.4.11.dylib */,
+				4F899FCB1BB99E94006171C2 /* libopencv_imgproc.2.4.11.dylib */,
+				4F899FCC1BB99E94006171C2 /* libopencv_ocl.2.4.11.dylib */,
+				4F899FCD1BB99E94006171C2 /* libopencv_calib3d.2.4.11.dylib */,
+				4F899FCE1BB99E94006171C2 /* libopencv_objdetect.2.4.11.dylib */,
+				4F899FCF1BB99E94006171C2 /* libopencv_ml.2.4.11.dylib */,
+				4F899FD01BB99E94006171C2 /* libopencv_highgui.2.4.11.dylib */,
+				4F899FBC1BB99DCA006171C2 /* CLM.o */,
+				4F899FBD1BB99DCA006171C2 /* FCheck.o */,
+				4F899FBE1BB99DCA006171C2 /* FDet.o */,
+				4F899FBF1BB99DCA006171C2 /* IO.o */,
+				4F899FC01BB99DCA006171C2 /* Patch.o */,
+				4F899FC11BB99DCA006171C2 /* PAW.o */,
+				4F899FC21BB99DCA006171C2 /* PDM.o */,
+				4F899FF91BBA1103006171C2 /* Tracker.o */,
+			);
+			name = Libraries;
+			path = EmotionsFolder/Libraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		4F899FEE1BBA1040006171C2 /* Includes */ = {
+			isa = PBXGroup;
+			children = (
+				4F899FEF1BBA1049006171C2 /* CLM.h */,
+				4F899FF01BBA1049006171C2 /* FCheck.h */,
+				4F899FF11BBA1049006171C2 /* FDet.h */,
+				4F899FF21BBA1049006171C2 /* IO.h */,
+				4F899FF31BBA1049006171C2 /* Patch.h */,
+				4F899FF41BBA1049006171C2 /* PAW.h */,
+				4F899FF51BBA1049006171C2 /* PDM.h */,
+				4F899FF61BBA1049006171C2 /* Tracker.h */,
+			);
+			name = Includes;
+			path = EmotionsFolder/Includes;
+			sourceTree = SOURCE_ROOT;
+		};
+		4F899FFD1BBB2ADF006171C2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9AA1BB8EC7900490A5C /* AppDelegate.swift */,
+				4F89A00D1BBB57A4006171C2 /* Buffer.swift */,
+				4F89A0111BBB5BA3006171C2 /* Constants.swift */,
+				4F89A00F1BBB57AC006171C2 /* Recorder.swift */,
+				4F89A0131BBC3F7E006171C2 /* FinderFavorites.swift */,
+				4F899FE01BB9E514006171C2 /* Outputter.swift */,
+				4F7AC6E31BBD0621002052DC /* ImageUtils.h */,
+				4F7AC6E41BBD0621002052DC /* ImageUtils.mm */,
+				4F899FE81BBA0FBC006171C2 /* FaceRecognizer.cpp */,
+				4F899FE91BBA0FBC006171C2 /* FaceRecognizer.h */,
+				4F899FEA1BBA0FBC006171C2 /* FaceRecognizerWrapper.h */,
+				4F899FEB1BBA0FBC006171C2 /* FaceRecognizerWrapper.mm */,
+				4F899FDC1BB9ADB3006171C2 /* EmotionsFolder-Bridging-Header.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4F9AD99C1BB8EC7800490A5C = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9A71BB8EC7900490A5C /* EmotionsFolder */,
+				4F9AD9B81BB8EC7900490A5C /* EmotionsFolderTests */,
+				4F9AD9A61BB8EC7900490A5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F9AD9A61BB8EC7900490A5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9A51BB8EC7900490A5C /* EmotionsFolder.app */,
+				4F9AD9B51BB8EC7900490A5C /* EmotionsFolderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F9AD9A71BB8EC7900490A5C /* EmotionsFolder */ = {
+			isa = PBXGroup;
+			children = (
+				4F899FFD1BBB2ADF006171C2 /* Source */,
+				4F899FEE1BBA1040006171C2 /* Includes */,
+				4F899FB41BB99D5E006171C2 /* Resources */,
+				4F9AD9AC1BB8EC7900490A5C /* Images.xcassets */,
+				4F899FBB1BB99DBE006171C2 /* Libraries */,
+				4F9AD9AE1BB8EC7900490A5C /* MainMenu.xib */,
+				4F9AD9A81BB8EC7900490A5C /* Supporting Files */,
+			);
+			path = EmotionsFolder;
+			sourceTree = "<group>";
+		};
+		4F9AD9A81BB8EC7900490A5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9A91BB8EC7900490A5C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F9AD9B81BB8EC7900490A5C /* EmotionsFolderTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9BB1BB8EC7900490A5C /* EmotionsFolderTests.swift */,
+				4F9AD9B91BB8EC7900490A5C /* Supporting Files */,
+			);
+			path = EmotionsFolderTests;
+			sourceTree = "<group>";
+		};
+		4F9AD9B91BB8EC7900490A5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F9AD9BA1BB8EC7900490A5C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F9AD9A41BB8EC7900490A5C /* EmotionsFolder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F9AD9BF1BB8EC7900490A5C /* Build configuration list for PBXNativeTarget "EmotionsFolder" */;
+			buildPhases = (
+				4F9AD9A11BB8EC7900490A5C /* Sources */,
+				4F9AD9A21BB8EC7900490A5C /* Frameworks */,
+				4F9AD9A31BB8EC7900490A5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotionsFolder;
+			productName = EmotionsFolder;
+			productReference = 4F9AD9A51BB8EC7900490A5C /* EmotionsFolder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F9AD9B41BB8EC7900490A5C /* EmotionsFolderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F9AD9C21BB8EC7900490A5C /* Build configuration list for PBXNativeTarget "EmotionsFolderTests" */;
+			buildPhases = (
+				4F9AD9B11BB8EC7900490A5C /* Sources */,
+				4F9AD9B21BB8EC7900490A5C /* Frameworks */,
+				4F9AD9B31BB8EC7900490A5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F9AD9B71BB8EC7900490A5C /* PBXTargetDependency */,
+			);
+			name = EmotionsFolderTests;
+			productName = EmotionsFolderTests;
+			productReference = 4F9AD9B51BB8EC7900490A5C /* EmotionsFolderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F9AD99D1BB8EC7800490A5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Anastasis Germanidis";
+				TargetAttributes = {
+					4F9AD9A41BB8EC7900490A5C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4F9AD9B41BB8EC7900490A5C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 4F9AD9A41BB8EC7900490A5C;
+					};
+				};
+			};
+			buildConfigurationList = 4F9AD9A01BB8EC7800490A5C /* Build configuration list for PBXProject "EmotionsFolder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F9AD99C1BB8EC7800490A5C;
+			productRefGroup = 4F9AD9A61BB8EC7900490A5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F9AD9A41BB8EC7900490A5C /* EmotionsFolder */,
+				4F9AD9B41BB8EC7900490A5C /* EmotionsFolderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F9AD9A31BB8EC7900490A5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F899FB81BB99D8B006171C2 /* face.con in Resources */,
+				4F899FB91BB99D8B006171C2 /* face.tracker in Resources */,
+				4F9AD9AD1BB8EC7900490A5C /* Images.xcassets in Resources */,
+				4F899FBA1BB99D8B006171C2 /* face.tri in Resources */,
+				4F9AD9B01BB8EC7900490A5C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F9AD9B31BB8EC7900490A5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F9AD9A11BB8EC7900490A5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9AD9AB1BB8EC7900490A5C /* AppDelegate.swift in Sources */,
+				4F7AC6E51BBD0621002052DC /* ImageUtils.mm in Sources */,
+				4F899FE11BB9E514006171C2 /* Outputter.swift in Sources */,
+				4F899FEC1BBA0FBC006171C2 /* FaceRecognizer.cpp in Sources */,
+				4F89A0141BBC3F7E006171C2 /* FinderFavorites.swift in Sources */,
+				4F89A0101BBB57AC006171C2 /* Recorder.swift in Sources */,
+				4F89A0121BBB5BA3006171C2 /* Constants.swift in Sources */,
+				4F899FED1BBA0FBC006171C2 /* FaceRecognizerWrapper.mm in Sources */,
+				4F89A00E1BBB57A4006171C2 /* Buffer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F9AD9B11BB8EC7900490A5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9AD9BC1BB8EC7900490A5C /* EmotionsFolderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F9AD9B71BB8EC7900490A5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F9AD9A41BB8EC7900490A5C /* EmotionsFolder */;
+			targetProxy = 4F9AD9B61BB8EC7900490A5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F9AD9AE1BB8EC7900490A5C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F9AD9AF1BB8EC7900490A5C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F9AD9BD1BB8EC7900490A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F9AD9BE1BB8EC7900490A5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4F9AD9C01BB8EC7900490A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/opencv/2.4.11_1/include,
+				);
+				INFOPLIST_FILE = EmotionsFolder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmotionsFolder",
+					"$(PROJECT_DIR)/EmotionsFolder/Libraries",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmotionsFolder/Source/EmotionsFolder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F9AD9C11BB8EC7900490A5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/opencv/2.4.11_1/include,
+				);
+				INFOPLIST_FILE = EmotionsFolder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmotionsFolder",
+					"$(PROJECT_DIR)/EmotionsFolder/Libraries",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmotionsFolder/Source/EmotionsFolder-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		4F9AD9C31BB8EC7900490A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmotionsFolderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmotionsFolder.app/Contents/MacOS/EmotionsFolder";
+			};
+			name = Debug;
+		};
+		4F9AD9C41BB8EC7900490A5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmotionsFolderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmotionsFolder.app/Contents/MacOS/EmotionsFolder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F9AD9A01BB8EC7800490A5C /* Build configuration list for PBXProject "EmotionsFolder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9AD9BD1BB8EC7900490A5C /* Debug */,
+				4F9AD9BE1BB8EC7900490A5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F9AD9BF1BB8EC7900490A5C /* Build configuration list for PBXNativeTarget "EmotionsFolder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9AD9C01BB8EC7900490A5C /* Debug */,
+				4F9AD9C11BB8EC7900490A5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F9AD9C21BB8EC7900490A5C /* Build configuration list for PBXNativeTarget "EmotionsFolderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9AD9C31BB8EC7900490A5C /* Debug */,
+				4F9AD9C41BB8EC7900490A5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F9AD99D1BB8EC7800490A5C /* Project object */;
+}

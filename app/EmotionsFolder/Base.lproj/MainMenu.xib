@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="EmotionsFolder" customModuleProvider="target">
+            <connections>
+                <outlet property="captureButton" destination="Fvh-t4-tpC" id="Z3e-Bp-Rdv"/>
+                <outlet property="captureCaption" destination="fBC-3h-q4f" id="AyF-Z8-irs"/>
+                <outlet property="statusMenu" destination="gTC-5J-OnB" id="Odz-xz-o00"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="gTC-5J-OnB">
+            <items>
+                <menuItem title="Capturing enabled" enabled="NO" id="fBC-3h-q4f">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Stop capturing" id="Fvh-t4-tpC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleCapturingButtonPressed:" target="Voe-Tx-rLC" id="45r-ZW-A2j"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="E4k-Po-9QV"/>
+                <menuItem title="Change destination folder..." id="lAL-uw-M9q">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="changeDestinationButtonPressed:" target="Voe-Tx-rLC" id="IUU-3r-nXq"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="yT9-fG-XQd"/>
+                <menuItem title="Quit" id="i7y-4V-UZw">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitButtonPressed:" target="Voe-Tx-rLC" id="X77-rz-xcI"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="118" y="161.5"/>
+        </menu>
+    </objects>
+</document>
