@@ -1,0 +1,162 @@
+@font-face {
+    font-family: MyriadPro;
+    src: url(fonts/MyriadPro-Regular.otf);
+}
+
+body {
+    font-family: MyriadPro;
+    text-align: center;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+
+#header img {
+    padding: 20px;
+}
+
+#folder {
+    display: block;
+}
+
+#source-button {
+    color: #ff3030;
+}
+
+#title {
+    font-size: 65px;
+    color: #2326aa;
+    text-shadow: 2px 2px #1cb5ac;
+    margin: 5px;
+}
+
+#subtitle {
+    font-size: 35px;
+    color: #6CEF50;
+    text-shadow: 1px 1px #3179FF;
+    font-style: italic;
+    font-weight: 900;
+    margin: 5px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#how {
+    background-color: #1233a0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#why {
+    background-color: #1C5A5A;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.question {
+    font-size: 35px;
+    color: #daf20b;
+    text-decoration: underline;
+}
+
+.answer {
+    text-align: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 1.5em;
+    width: 65%;
+    margin: 0 auto;
+}
+
+footer {
+    background: #202526;
+    padding: 25px;
+    font-size: 25px;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+#testimonials {
+    background: #a01212;
+    padding: 15px;
+}
+
+#download-button {
+    background-color: rgba(45, 39, 39, 0.92);
+    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.98);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#source-button {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    text-shadow: 2px 2px yellow;
+}
+
+#buttons p {
+    padding: 10px;
+}
+
+#folder {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 600px;
+}
+
+#testimonials {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.testimonial-message {
+    margin: 0 auto;
+    background-color: #FFFBF4;
+    padding: 20px;
+    color: #16162D;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.testimonial {
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 30px;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .testimonial {
+        width: 80%;
+    }
+
+    .answer {
+        width: 85%;
+    }
+
+    #download-button {
+        width: 90%;
+        font-size: 25px;
+    }
+}
