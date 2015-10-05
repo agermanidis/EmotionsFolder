@@ -3,7 +3,7 @@
 <img height=80 width=104 src="images/angryfolder.png"></img>
 <img height=80 width=104 src="images/surprisedfolder.png"></img>
 
-# Emotions Folder
+# [Emotions Folder](http://emotionsfolder.com)
 
 The Emotions Folder is an OS X application that uses your webcam to
 continuously monitor your facial expression. When it recognizes any
