@@ -1,9 +1,7 @@
-<img height=80 width=104 src="images/happyfolder.png"></img>
-<img height=80 width=104 src="images/sadfolder.png"></img>
-<img height=80 width=104 src="images/angryfolder.png"></img>
-<img height=80 width=104 src="images/surprisedfolder.png"></img>
-<img height=80 width=104 src="images/fearfolder.png"></img>
-<img height=80 width=104 src="images/disgustfolder.png"></img>
+<img height=80 width=104 src="website/images/happyfolder.png"></img>
+<img height=80 width=104 src="website/images/sadfolder.png"></img>
+<img height=80 width=104 src="website/images/angryfolder.png"></img>
+<img height=80 width=104 src="website/images/surprisedfolder.png"></img>
 
 # Emotions Folder
 
