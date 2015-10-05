@@ -73,13 +73,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             captureButton.title = "Stop capturing"
             
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-                self.recorder.startRecording {
+                let emotionChange = {
+                    emotion in
+                    self.setStatusIconToEmotion(emotion)
+                }
+                                
+                self.recorder.startRecording(emotionChange, callback: {
                     emotion, images in
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)) { [unowned self] in
-                        self.setStatusIconToEmotion(emotion)
+                        
                         Outputter.save(images, outputDirectory: self.currentDestinationPath(), emotion: Int(emotion))
                     }
-                }
+                })
             }
         }
     }

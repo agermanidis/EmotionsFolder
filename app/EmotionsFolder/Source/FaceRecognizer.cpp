@@ -65,6 +65,7 @@ double calculate_mean(double *d, int n)
     return m;
 }
 
+int FAIL = -1;
 int NEUTRAL = 0;
 int HAPPINESS = 1;
 int SADNESS = 2;
@@ -76,6 +77,11 @@ int recognize_emotion(cv::Mat &face_shape) {
     double *distances = get_all_distances_between_points(face_shape);
     double mean = calculate_mean(distances, n*(n-1));
     double stdev = calculate_stdev(distances, n*(n-1));
+    
+    // sanity check
+    if (stdev < 20) {
+        return FAIL;
+    }
 
     double dist_21_39 = normalized_distance(get_point(21, face_shape), get_point(39, face_shape), mean, stdev);
     double dist_48_57 = normalized_distance(get_point(48, face_shape), get_point(57, face_shape), mean, stdev);
@@ -86,7 +92,7 @@ int recognize_emotion(cv::Mat &face_shape) {
         return ANGER;
     } else if ((dist_48_57 > -1.25) && (dist_30_51 < -1.35)) {
         return HAPPINESS;
-    } else if (dist_30_57 > -0.6) {
+    } else if (dist_30_57 > -0.3) {
         return SURPRISE;
     } else if (dist_30_57 < -0.8) {
         return SADNESS;
@@ -123,6 +129,7 @@ int FaceRecognizer::startCapturing()
 {
     started = false;
     capturing = true;
+    int nFails = 0;
     //parse command line arguments
     char ftFile[256],conFile[256],triFile[256];
     bool fcheck = false; double scale = 1; int fpd = -1;
@@ -171,11 +178,26 @@ int FaceRecognizer::startCapturing()
             cv::cvtColor(im,gray,CV_BGR2GRAY);
             std::vector<int> wSize; if(failed)wSize = wSize2; else wSize = wSize1;
             if(model.Track(gray,wSize,fpd,nIter,clamp,fTol,fcheck) == 0){
-                failed = false;
+//                std::cout << "got frame" << '\n';
                 gotFrame = true;
-                lastEmotion = recognize_emotion(model._shape);
+                failed = false;
+                int emotion = recognize_emotion(model._shape);
+                if (emotion == FAIL) {
+                    gotFrame = false;
+                    if (nFails++ > 10) {
+                        failed = true;
+                        break;
+                    }
+                } else {
+                    lastEmotion = emotion;
+                }
             } else {
+//                std::cout << "got no frame" << '\n';
                 gotFrame = false;
+                if (nFails++ > 10) {
+                    failed = true;
+                    break;
+                }
             }
         }
         catch (cv::Exception& e) {
@@ -183,6 +205,7 @@ int FaceRecognizer::startCapturing()
             failed = true;
             break;
         }
+        
         usleep(100000);
     }
     cvReleaseCapture( &camera );

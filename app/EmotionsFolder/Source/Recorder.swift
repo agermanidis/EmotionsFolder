@@ -8,10 +8,12 @@
 
 import Cocoa
 
+typealias EmotionChangeCallback = (Int) -> ()
 typealias DetectionCallback = (Int, [CGImage]) -> ()
 
 class Recorder : NSObject {
     var callback : DetectionCallback?
+    var emotionChange : EmotionChangeCallback?
     var timer : NSTimer?
     var recalibrationTimer : NSTimer?
     let buffer = Buffer(capacity: Int(Double(Constants.CLIP_DURATION)/Constants.CAPTURE_RATE))
@@ -24,7 +26,8 @@ class Recorder : NSObject {
         return CGDisplayCreateImage(displayId).takeRetainedValue()
     }
 
-    func startRecording(callback: DetectionCallback) {
+    func startRecording(emotionChange: EmotionChangeCallback, callback: DetectionCallback) {
+        self.emotionChange = emotionChange
         self.callback = callback
         buffer.empty()
         faceRecognizer.startCapturing()
@@ -35,13 +38,13 @@ class Recorder : NSObject {
             userInfo: nil,
             repeats: true
         )
-        recalibrationTimer = NSTimer.scheduledTimerWithTimeInterval(
-            Constants.RECALIBRATION_RATE,
-            target: self,
-            selector: "recalibrate",
-            userInfo: nil,
-            repeats: true
-        )
+//        recalibrationTimer = NSTimer.scheduledTimerWithTimeInterval(
+//            Constants.RECALIBRATION_RATE,
+//            target: self,
+//            selector: "recalibrate",
+//            userInfo: nil,
+//            repeats: true
+//        )
     }
 
     func recalibrate() {
@@ -79,6 +82,7 @@ class Recorder : NSObject {
                 return
             }
             emotionDuration += Constants.CAPTURE_RATE
+            
             if emotionDuration > Constants.EMOTION_CAPTURE_THRESHOLD && buffer.atCapacity() {
                 let images = buffer.freeze() as! [CGImage]
                 println(images)
@@ -88,6 +92,7 @@ class Recorder : NSObject {
         } else {
             currentEmotion = newEmotion
             emotionDuration = 0.0
+            self.emotionChange!(currentEmotion)
         }
     }
     

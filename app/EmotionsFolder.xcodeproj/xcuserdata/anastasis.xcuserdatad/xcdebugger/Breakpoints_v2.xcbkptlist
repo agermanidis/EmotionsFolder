@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmotionsFolder/Source/Recorder.swift"
-            timestampString = "465373693.830377"
+            timestampString = "465702274.134205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "createComposition(_:face:)"
             landmarkType = "5">
          </BreakpointContent>
