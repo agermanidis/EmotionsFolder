@@ -159,6 +159,10 @@ footer a {
         width: 90%;
         font-size: 25px;
     }
+
+    #folder {
+        width: 90%;
+    }
 }
 
 .question {
