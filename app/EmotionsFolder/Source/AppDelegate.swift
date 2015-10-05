@@ -29,6 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         ensureDestinationPathExists()
         updateCaptureState()
         firstTimeCheck()
+        updateCountText()
     }
 
     func setStatusIconToEmotion(emotion:Int) {
@@ -62,14 +63,37 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         defaults.setValue(true, forKey: "hasBeenOpened")
     }
     
+    var lastHour = NSDate()
+    var hourCount = 0
+    
+    func updateCountText() {
+        var emotionText = "emotion"
+        if hourCount != 1 {
+            emotionText += "s"
+        }
+        captureCaption.title = String(format: "%d %@ saved in the past hour", hourCount, emotionText)
+    }
+    
+    func getHourFromDate(date:NSDate) -> Int {
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        return components.hour
+    }
+    
+    func incHourCount() {
+        if getHourFromDate(NSDate()) == getHourFromDate(lastHour) {
+            hourCount += 1
+        } else {
+            hourCount = 0
+        }
+        updateCountText()
+    }
+    
     func updateCaptureState() {
         if !currentlyCapturing {
-            captureCaption.hidden = true
             captureButton.title = "Start capturing"
             self.recorder.stopRecording()
         } else {
-            captureCaption.hidden = false
-            captureCaption.title = "[now capturing]"
             captureButton.title = "Stop capturing"
             
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
@@ -80,8 +104,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
                                 
                 self.recorder.startRecording(emotionChange, callback: {
                     emotion, images in
+                    self.incHourCount()
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)) { [unowned self] in
-                        
                         Outputter.save(images, outputDirectory: self.currentDestinationPath(), emotion: Int(emotion))
                     }
                 })
