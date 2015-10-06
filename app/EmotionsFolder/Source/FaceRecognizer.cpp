@@ -94,7 +94,7 @@ int recognize_emotion(cv::Mat &face_shape) {
         return HAPPINESS;
     } else if (dist_30_57 > -0.3) {
         return SURPRISE;
-    } else if (dist_30_57 < -0.8) {
+    } else if (dist_30_57 < -0.75) {
         return SADNESS;
     } else {
         return NEUTRAL;
