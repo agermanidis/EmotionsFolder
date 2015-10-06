@@ -85,6 +85,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             hourCount += 1
         } else {
             hourCount = 0
+            lastHour = NSDate()
         }
         updateCountText()
     }
